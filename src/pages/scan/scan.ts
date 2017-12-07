@@ -3,8 +3,8 @@ import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angu
 
 import {BarcodeScanner, BarcodeScannerOptions, BarcodeScanResult} from '@ionic-native/barcode-scanner'
 import { HttpClient } from '@angular/common/http';
-// import { ToastController } from 'ionic-angular/components/toast/toast-controller';
 
+import {AngularFireDatabase, AngularFireList} from 'angularfire2/database'
 
 @IonicPage()
 @Component({
@@ -20,12 +20,30 @@ export class ScanPage {
   // variables à utiliser côté template
   api_response_raw;
   api_response;
+  afl: AngularFireList<any>;
 
   constructor(public navCtrl: NavController, 
               public navParams: NavParams,
               private bcs: BarcodeScanner,
               private toastCtrl: ToastController,
-              private _http: HttpClient) {
+              private _http: HttpClient,
+              private afd: AngularFireDatabase) {
+  
+    // Instanciation de AngularFireList via AngularFireDatabase
+    // on souhaite avoir un food-article pour que lorsqu'il y a persitence que l'on ait
+    /*
+      foodchecker
+          food-articles
+                aze125qsd125 [pour l'id généré automatiquement]
+                  name: "chocolat" 
+                  id: "..."
+                sdf254fgt859
+                  name: "..."
+                  id: "..."
+    */
+
+    this.afl = this.afd.list('/food-articles') // food-articles sera un noeud ou enfant de notre base de données
+                
   }
 
   ionViewDidLoad() {
