@@ -8,7 +8,6 @@ import {HttpClientModule} from '@angular/common/http'
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
-import { ScanPage } from './../pages/scan/scan';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -21,8 +20,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
-    ScanPageModule,
     HttpClientModule,
+    ScanPageModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],

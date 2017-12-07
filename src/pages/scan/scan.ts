@@ -72,15 +72,16 @@ export class ScanPage {
 //   }
 
 
-  getArticleByBarcode(code) {
+  getArticleByBarcode(code: string) {
     this._http
           .get(`${this.BASE_URL}${code}`)
-          .subscribe(data => this.displayResult(data), error => this.handleGetError(error))
+          .subscribe(data => this.displayResult(data), 
+                      error => this.handleGetError(error))
   }
 
   displayResult(data) {
-    this.api_response_raw = data;
-    this.api_response = data
+    this.api_response_raw = data; // pour la condition d'affichage
+    this.api_response = data; // pour récupérer les infos qui nous intéressent
   }
 
   handleGetError(error) {
