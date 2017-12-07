@@ -1,3 +1,4 @@
+import { ScanPageModule } from './../pages/scan/scan.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -5,7 +6,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
-import { ScanPage } from './../pages/scan/scan';
+// import { ScanPage } from './../pages/scan/scan';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -15,10 +16,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     ListPage,
-    ScanPage
   ],
   imports: [
     BrowserModule,
+    ScanPageModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -26,7 +27,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     ListPage,
-    ScanPage
   ],
   providers: [
     StatusBar,
