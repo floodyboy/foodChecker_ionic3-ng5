@@ -34,27 +34,27 @@ export class ScanPage {
     /*
       foodchecker
           food-articles
-                aze125qsd125 [pour l'id généré automatiquement]
+                123654879 [pour l'id généré automatiquement]
                   name: "chocolat" 
                   id: "..."
-                sdf254fgt859
+                597465213
                   name: "..."
                   id: "..."
     */
 
     this.afl = this.afd.list('/food-articles') // food-articles sera un noeud ou enfant de notre base de données
-                
+
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ScanPage');
-  }
+  // ionViewDidLoad() {
+  //   console.log('ionViewDidLoad ScanPage');
+  // }
 
   // Implémentation du scan ... en mode Promise (.then ... catch)
   scanBarcode() {
     const options: BarcodeScannerOptions = {
       prompt: 'Pointer votre camera vers un code barre', // message à afficher
-      torchOn: false, // la lampe du phone ne s'allume pas
+      torchOn: false // la lampe du phone ne s'allume pas
     }
 
     // ... en mode Promise (.then ... catch)
@@ -106,4 +106,15 @@ export class ScanPage {
     console.log(error);
     console.error(error.message);
   }
+
+  // foodItem sera fourni côté "vue"
+  addToFavoriteFood(foodItem) {
+    // objet à créer et à pousser dans firebase
+    const item = {
+      id: foodItem._id,
+      name: foodItem.product_name_fr
+    }
+    this.afl.push(item)
+  }
+
 }

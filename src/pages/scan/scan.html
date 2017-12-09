@@ -18,11 +18,11 @@
     <ion-card-content>
       <p>code barre : {{result.text}}</p>
       <p>format : {{result.format}}</p>
-      <button ion-button (click)="getArticleByBarcode(result.text)">Détails du produit</button>
+      <button ion-button (click)="getArticleByBarcode(result.text)" block>Détails du produit</button>
     </ion-card-content>
   </ion-card>
 
-  <ion-card *ngIf="api_response_raw"></ion-card>
+  <ion-card *ngIf="api_response_raw && api_response.product">
     <img src="{{api_response.product.image_url}}" alt="{{api_response['product']['ingredients_text']}}">
     <p>{{api_response['product']['ingredients_text_with_allergens_fr']}}</p>
     <!-- <p>traces de : {{api_response['product']['traces'] | lowercase}}</p> -->
@@ -37,4 +37,7 @@
       <li>protéines {{api_response['product']['nutriments']['proteins_100g']}} %</li>
       <li>fibres {{api_response['product']['nutriments']['fiber_100g']}} %</li>
     </ul>
+    <!-- possibilité d'ajout en base (firebase) -->
+    <button ion-button block (click)="addToFavoriteFood(api_response_raw.product)">Ajout aux favoris</button>
+  </ion-card>
 </ion-content>

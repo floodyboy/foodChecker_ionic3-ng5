@@ -25,10 +25,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
     ScanPageModule,
+    IonicModule.forRoot(MyApp),
     HttpClientModule,
-    AngularFireModule.initializeApp(CREDENTIALS) // permet de faire du CRUD dans FIREBASE
+    AngularFireModule.initializeApp(CREDENTIALS), // permet de faire du CRUD dans FIREBASE
+    AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
