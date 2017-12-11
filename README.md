@@ -1,8 +1,6 @@
 ## **Ionic foodChecker App**
 
-~~~
 Ionic 3 App with Angular 5 & [OpenFoodFacts](https://fr.openfoodfacts.org/) API
-~~~
 
 ## Table of Contents
  - [Getting Started](#getting-started)
@@ -24,12 +22,12 @@ _Note: You may need to add “sudo” in front of any global commands to install
 
 ## Animated Gif 
 
-![techNews](https://github.com/oussou-dev/techNews_ionic3/blob/master/sc-foodChecker.gif)
+![techNews](https://github.com/oussou-dev/foodChecker_ionic3-ng5/blob/master/sc-foodChecker.gif)
 
 ## ScreenShots
 
 All app preview screenshots were taken by running `ionic serve --lab`.
 
-| ![Screenshot1](https://github.com/oussou-dev/foodChecker_ionic3-ng5/blob/master/sc-home.png) | ![Screenshot2](https://github.com/oussou-dev/foodChecker_ionic3-ng5/blob/master/sc-add-pgrm.png) | ![Screenshot3](https://github.com/oussou-dev/foodChecker_ionic3-ng5/blob/master/sc-pgrms.png) |
+| ![Screenshot1](https://github.com/oussou-dev/foodChecker_ionic3-ng5/blob/master/sc-home.png) | ![Screenshot2](https://github.com/oussou-dev/foodChecker_ionic3-ng5/blob/master/sc-menu.png) | ![Screenshot3](https://github.com/oussou-dev/foodChecker_ionic3-ng5/blob/master/sc-scan.png) |
 | ------ | ------ | ------ |
 |  |  |  |
