@@ -1,6 +1,8 @@
 ## **Ionic foodChecker App**
 
+~~~
 Ionic 3 App with Angular 5 & [OpenFoodFacts](https://fr.openfoodfacts.org/) API
+~~~
 
 ## Table of Contents
  - [Getting Started](#getting-started)
