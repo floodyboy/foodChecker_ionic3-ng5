@@ -36,7 +36,13 @@
     },
     "devDependencies": {
         "@ionic/app-scripts": "3.1.5",
-        "typescript": "2.4.2"
+        "typescript": "2.4.2",
+      "cryptiles": ">=4.1.2",
+      "sshpk": ">=1.13.2",
+      "lodash": ">=4.17.5",
+      "hoek": ">=4.2.1",
+      "randomatic": ">=3.0.0",
+      "protobufjs": ">=5.0.3"
     },
     "description": "An Ionic project",
     "cordova": {
